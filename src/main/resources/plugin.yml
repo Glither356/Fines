@@ -1,0 +1,40 @@
+name: Fines
+version: '${project.version}'
+main: fines.fines.Fines
+api-version: 1.19
+description: plugin for FINE
+
+
+commands:
+  invoice:
+    description: Выдает инвойс игроку
+    usage: /invoice <Name> <Count of AP> <Reason>
+  invoicehelp:
+    description: Дает описание дейстивий для выплаты инвойса
+    usage: /invoicehelp
+  invoicelist:
+    description: Показывает список всех твоих штрафов
+    usage: /invoicelist
+  invoiceremove:
+    description: Убирает инвойс
+    usage: /invoiceremove <Name> <Id>
+    aliases:
+      - ir
+      - invrem
+
+  invoiceplayerlist:
+    description: Просматривает инвойс игроков
+    usage: /ipl <Name>
+    aliases:
+      - ipl
+
+permissions:
+  fines.invoice.give:
+    description: Perm
+    default: op
+  fines.invoice.remove:
+    description: Perm
+    default: op
+  fines.invoice.list:
+    description: Perm
+    default: op
